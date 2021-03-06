@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>10-DTP <%= fullname %></title>
+    <link rel="icon" href="images/icon.svg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/fontawesome-all.css" rel="stylesheet">
+    <link href="/stylesheets/swiper.css" rel="stylesheet">
+    <link href="/stylesheets/magnific-popup.css" rel="stylesheet">
+    <link href="/stylesheets/styles.css" rel="stylesheet">
+    <link href="/stylesheets/login-second.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <% include ./includes/menu_home.ejs %>
+        <!-- end of navbar -->
+        <div class="header-intro">
+            <div class="header-content">
+                <div class="intro">
+                    <img class="round icon-menu" width="40" height="40" avatar="<%= fullname %>">
+                    <div class="infor">
+                        <div class="name">
+                            <%= fullname %>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs menu-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link <%= profile %>" data-toggle="tab" href="#profile">Profile and Visibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= activity %>" data-toggle="tab" href="#activity">Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= card %>" data-toggle="tab" href="#card">Cards</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+            </div>
+        </div>
+        <div class="container card" style="width: 750px; margin-bottom: 150px; padding: 20px 30px 100px 40px;">
+            <div class="tab-content">
+                <div id="profile" class="<%= classProfile %>"><br>
+                    <h3>About</h3>
+                    <form action="/saveProfile" method="POST" class="">
+                        <div class="form-group">
+                            <label for="usr">Email:</label>
+                            <input type="text" class="form-control" id="email" name="email" value="<%= email %>"
+                                disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="usr">Fullname:</label>
+                            <input type="text" class="form-control" id="fullname" name="fullname"
+                                value="<%= fullname %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="usr">Phone number:</label>
+                            <input type="number" class="form-control" id="phone" name="phone" value="<%= sdt %>">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+
+                <div id="activity" class="<%= classActivity %>"><br>
+                    <div class="setting">
+                        <div class="setting-account">
+                            <h4>Account</h4>
+                            <hr>
+                            <button type="button" class="btn btn-light" data-toggle="modal"
+                                data-target="#myModal">Change
+                                Password</button>
+                            <!-- xu dung err de thong bao ra loi -->
+                            <span style='color:red'>
+                                <%= err %>
+                            </span>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Change password</h4>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                style="float: left; width: 40px;">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="/update/changePassword" method="POST" class="">
+                                                <div class="form-group">
+                                                    <label for="usr">Old Password:</label>
+                                                    <input type="password" class="form-control" id="password"
+                                                        name="passwordOld">
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="usr">New Password:</label>
+                                                    <input type="password" class="form-control" id="password"
+                                                        name="passwordNew">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="usr">Confirm Password:</label>
+                                                    <input type="password" class="form-control" id="password"
+                                                        name="confirm">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <input type="submit" value="Submit" class="btn solid" />
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" class="<%= classCard %>"><br>
+                    <div class="starView">
+                        <h3>Star View</h3>
+                        <ul class="nav  nav-stacked" id="broad_star">
+                            <li class="title-select "><i class="far fa-clock"></i> Star Viewed</li>
+                        </ul>
+                    </div>
+                    <div class="popular" style="margin-top: 50px;">
+                        <h3>Personal broad</h3>
+                        <ul class="nav  nav-stacked" id="broad_personal">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/javascripts/jquery.min.js"></script>
+        <!-- jQuery for Bootstrap's JavaScript plugins -->
+        <script src="/javascripts/popper.min.js"></script>
+        <!-- Popper tooltip library for Bootstrap -->
+        <script src="/javascripts/bootstrap.min.js"></script>
+        <!-- Bootstrap framework -->
+        <script src="/javascripts/jquery.easing.min.js"></script>
+        <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="/javascripts/swiper.min.js"></script>
+        <!-- Swiper for image and text sliders -->
+        <script src="/javascripts/jquery.magnific-popup.js"></script>
+        <!-- Magnific Popup for lightboxes -->
+        <script src="/javascripts/validator.min.js"></script>
+        <!-- Validator.js - Bootstrap plugin that validates forms -->
+        <script src="/javascripts/scripts.js"></script>
+        <script src="/javascripts/leteravatar.js"></script>
+
+        <script src="/javascripts/scroll.js"></script>
+        <script src="/javascripts/profile.js"></script>
+        <!-- Custom scripts -->
+</body>
+
+</html>

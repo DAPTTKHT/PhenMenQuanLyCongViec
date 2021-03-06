@@ -1,0 +1,382 @@
+body {
+  background:lightblue  url('/images/background/bg1.gif') no-repeat fixed center;
+  height: 100vh;
+  overflow-y: hidden;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+ul.change_background{
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+}
+.change_background li{
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+}
+.change_background button{
+  height: 40px;
+  width: 40px;
+  background-size: auto auto;
+}
+
+.change_background button{
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.header-board {
+  background: #ffffff;
+  font-size: 13px;
+  justify-content: space-between;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 90px;
+  z-index: 3;
+  border-top: 1px solid rgba(128, 128, 128, 0.137);
+}
+
+.header-board .nav {
+  padding-top: 6px;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 510px) {
+  #root {
+    margin-top: 200px !important;
+  }
+}
+
+@media (max-width: 1210px) {
+  div.header-board {
+    display: inline;
+    top: 74px !important;
+  }
+  #root {
+    margin-top: 180px;
+  }
+  input.comment {
+    margin-right: 3px;
+    width: 160px;
+  }
+  #to-do-list-button {
+    width: 50px;
+  }
+  .header-board .nav .nav-item {
+    margin-right: 0px;
+  }
+}
+.header-board .nav .nav-item {
+  margin-right: 10px;
+}
+.header-board .nav .nav-item button {
+  height: 35px;
+  font-size: 14px;
+}
+#addTodoListDiv button {
+  margin-left: 0.5em;
+}
+
+.title-board {
+  color: #172b4d;
+  padding-top: 3px;
+}
+/* Lists */
+
+.lists-container::-webkit-scrollbar {
+  height: 2.4rem;
+}
+
+.lists-container::-webkit-scrollbar-thumb {
+  background-color: #66a3c7;
+  border: 0.8rem solid #0079bf;
+  border-top-width: 0;
+}
+
+.lists-container {
+  display: flex;
+  align-items: start;
+  padding: 0 0.8rem 0.8rem;
+}
+
+.todoList {
+  /*border: 1px solid red;*/
+  border-radius: 4px;
+  min-height: 100px;
+  background: rgb(235, 235, 235);
+  padding: 0.7em;
+  margin: 1em 0 1em 1em;
+  float: left;
+  flex: 0 0 17rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  max-width: 270px;
+}
+
+.todoList h2 {
+  font-size: 1em;
+  margin-bottom: 1px;
+  overflow: hidden;
+}
+
+.todoList .row {
+  margin: 0px;
+  justify-content: space-between;
+}
+
+#to-do-list-button {
+  margin-left: 0.5em;
+}
+
+.card-item {
+  /*border: 1px solid blue;*/
+  border-radius: 4px;
+  border-bottom: rgb(180, 180, 180) 1px solid;
+  background: white;
+  margin: 0.5em 0 0 0;
+  padding: 0.5em;
+  font-size: 0.9em;
+  position: relative;
+  cursor: grabbing;
+  overflow-x: hidden;
+}
+.content {
+  margin-top: 140px;
+}
+.content-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-bottom {
+  padding: 0px 8px;
+  font-size: 13px;
+}
+
+.content-bottom .nav {
+  justify-content: space-between;
+  margin-top: -17px;
+}
+
+.content-top p {
+  padding: 0.5em;
+  overflow-x: hidden;
+  color: #172b4d;
+}
+
+.date {
+  background: rgba(233, 102, 102, 0.712);
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 7px;
+}
+
+.number-comment {
+  background: rgba(128, 128, 128, 0.733);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 7px;
+}
+
+.number-check {
+  background: rgba(98, 216, 210, 0.726);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 7px;
+}
+
+.card-item button {
+  visibility: hidden;
+  height: max-content;
+  background: none;
+  border: none;
+  padding: 0.3em;
+}
+
+.card-item:hover button {
+  visibility: visible;
+}
+
+.card-item button:hover {
+  background-color: rgb(235, 235, 235);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menuContainer {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  position: fixed;
+}
+
+.delete_card_member,
+.add_card_member {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+.delete_card_member:hover,
+.add_card_member:hover {
+  opacity: 1;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.menu {
+  top: 0;
+  left: 0;
+  background-color: rgb(235, 235, 235);
+  width: 850px;
+  height: 90vh;
+  min-height: 300px;
+  max-height: 80vh;
+  overflow: auto;
+  margin: auto;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.menuTitle {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.menuMember{
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menuDescription {
+  margin-bottom: 2em;
+  line-height: 1.5em;
+}
+
+.menuDescription textarea {
+  width: 100%;
+  height: 5em;
+  padding: 0.5em;
+  font-size: 1.1em;
+}
+
+.comment {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  font-size: 0.8em;
+  overflow: auto;
+  margin-right: 10px;
+}
+
+.checklist {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  font-size: 0.8em;
+  overflow: auto;
+}
+
+ul li.row {
+  margin-left: 0px;
+  width: 90%;
+}
+.commentsInput {
+  margin-right: 0.5em;
+  width: 80%;
+}
+
+.btn-save {
+  background-color: #5aac44;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0em 1em;
+  height: 30px;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.todoList ul {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+ul.sortable {
+  padding-bottom: 10px;
+}
+.ui-sortable-placeholder {
+  visibility: inherit !important;
+  background: transparent;
+  border: rgb(131, 125, 125) 2px dashed;
+  padding: 8px 10px;
+  margin: 10px;
+}
+input.comment {
+  height: 30px;
+}
+
+/* start checked */
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+}
+
+.ready {
+  font-size: 1.5em;
+}
+
+.ui-progressbar-value {
+  background: linear-gradient(
+    to right,
+    rgb(183, 194, 88),
+    rgb(235, 123, 58),
+    rgb(243, 82, 7)
+  );
+}
+
+.progressbar-container {
+  position: relative;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.progressbar-bar {
+  height: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: rgb(235, 123, 58);
+}
+
+.progressbar-label {
+  position: absolute;
+  top: 1px;
+  font-size: 14px;
+  left: 45%;
+  z-index: 2;
+}
+/* end check */

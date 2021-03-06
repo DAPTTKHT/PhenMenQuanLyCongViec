@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broad</title>
+    <link rel="icon" href="images/icon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/fontawesome-all.css" rel="stylesheet">
+    <link href="/stylesheets/swiper.css" rel="stylesheet">
+    <link href="/stylesheets/magnific-popup.css" rel="stylesheet">
+    <link href="/stylesheets/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"
+        rel="stylesheet" />
+    <link rel='stylesheet prefetch'
+        href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+    <link href="/stylesheets/broad-add.css" rel="stylesheet">
+
+</head>
+
+<body>
+     <!-- Navigation -->
+    <% include ./includes/menu_home.ejs %>
+        <div class="header-board" id="headerBroad">
+            <ul class="nav left">
+                <li class="nav-item">
+                <li class="title-board nav-item">
+                    <h4 id='titleBoard'></h4>
+                </li>
+                <li class="nav-item" style="margin-left: -5px;">
+                    <button class="btn btn-light" id="btnStar">
+                        <i class="far fa-star"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <div id="addTodoListDiv">
+                        <input id="addTodoListInput" class="comment"
+                            style="height: 30px; margin-top: 0px; margin-left: 10px;">
+                        <button id="addTodoListButton" class="btn-save"
+                            style="height: 35px;color: #212529;background-color: #f8f9fa;border-color: #f8f9fa; margin-top: 0px;">
+                            Add</button>
+                    </div>
+                </li>
+                </li>
+            </ul>
+            <ul class="nav right">
+                <li class="nav-item">
+                    <button class="btn" id="btnModifyTeam" disabled>Private Team</button>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" id="memberTeam" class="btn btn-light dropdown-toggle"
+                            data-toggle="dropdown">
+                            Member Team
+                        </button>
+                        <div id=member1 class="dropdown-menu"
+                            style="padding: 10px 20px 20px 20px; height: 200px; overflow: auto;">
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" id="inviteTeam" class="btn btn-light dropdown-toggle"
+                            data-toggle="dropdown">
+                            Invite
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right"
+                            style="padding: 10px 20px 20px 20px;max-height: 300px;width: 250px; overflow: auto;">
+                            <div class="form-group" style="margin-left: 10px; margin-right: 10px;">
+                                <input type="text" class="form-control" placeholder="Search user..." id="inviteInput">
+                            </div>
+                            <ul id="users">
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" id="changeBackground" class="btn btn-light dropdown-toggle"
+                            data-toggle="dropdown">
+                            Change background
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <ul class="change_background">
+                                <li class="dropdown-item" onclick="changeBackgroundType(bgs[0])">
+                                    <button
+                                        style="background:url('/images/background/bg1.gif') no-repeat"></button>
+                                    <span>Tree cute</span>
+                                </li>
+                                <li class="dropdown-item" onclick="changeBackgroundType(bgs[1])">
+                                    <button
+                                        style="background:url('/images/background/bg2.gif') no-repeat"></button>
+                                    <span>Paper</span>
+                                </li>
+                                <li class="dropdown-item"  onclick="changeBackgroundType(bgs[2])">
+                                    <button
+                                        style="background:url('/images/background/bg3.jpg') no-repeat"></button>
+                                    <span>Wall origin</span>
+                                </li>
+                                <li class="dropdown-item"  onclick="changeBackgroundType(bgs[3])">
+                                    <button
+                                        style="background:url('/images/background/bg4.jpg') no-repeat"></button>
+                                    <span>wall white</span>
+                                </li>
+                                <li class="dropdown-item"  onclick="changeBackgroundType(bgs[4])">
+                                    <button
+                                        style="background:url('/images/background/bg5.jpg') no-repeat"></button>
+                                    <span>Covit-19</span>
+                                </li>
+                                <li class="dropdown-item"  onclick="changeBackgroundType(bgs[5])">
+                                    <button onclick="changeBackgroundType2(bgs[5])"
+                                        style="background:url('/images/background/bg6.png') no-repeat"></button>
+                                    <span>Gift</span>
+                                </li>
+                                <li class="dropdown-item"  onclick="changeBackgroundType(bgs[6])">
+                                    <button style="background:#0079bf" onclick="changeBackgroundType(bgs[6])"></button>
+                                    <span onclick="changeBackgroundType(bgs[6])">Blue</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content"></div>
+        <div id="root" class="lists-container"></div>
+        <script src="/javascripts/jquery.min.js"></script>
+        <!-- jQuery for Bootstrap's JavaScript plugins -->
+        <script src="/javascripts/popper.min.js"></script>
+        <!-- Popper tooltip library for Bootstrap -->
+        <script src="/javascripts/bootstrap.min.js"></script>
+        <!-- Bootstrap framework -->
+        <script src="/javascripts/jquery.easing.min.js"></script>
+        <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="/javascripts/swiper.min.js"></script>
+        <!-- Swiper for image and text sliders -->
+        <script src="/javascripts/jquery.magnific-popup.js"></script>
+        <!-- Magnific Popup for lightboxes -->
+        <script src="/javascripts/validator.min.js"></script>
+        <!-- Validator.js - Bootstrap plugin that validates forms -->
+        <script src="/javascripts/scripts.js"></script>
+        <script src="/javascripts/leteravatar.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="/javascripts/broad.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+        <script src="/javascripts/changeBackground.js"></script>
+        <script src="/javascripts/search.js"></script>
+</body>
+
+</html>

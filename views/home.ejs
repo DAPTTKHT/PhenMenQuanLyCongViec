@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="" />
+    <!-- website name -->
+    <meta property="og:site" content="" />
+    <!-- website link -->
+    <meta property="og:title" content="" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" />
+    <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>10-DTP</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/fontawesome-all.css" rel="stylesheet">
+    <link href="/stylesheets/swiper.css" rel="stylesheet">
+    <link href="/stylesheets/magnific-popup.css" rel="stylesheet">
+    <link href="/stylesheets/styles.css" rel="stylesheet">
+    <link href="/stylesheets/scroll.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="/images/icon.svg">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top" data-target="#myScrollspy" data-offset="20">
+
+    <% include ./includes/menu_home.ejs %>
+        <!-- Preloader  -->
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+        <!-- end of navbar -->
+        <!-- end of navigation -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <nav id="myScrollspy">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="select-menu">
+                                    <a href="/card">
+                                        <Button class="btn btn-light"><i class="fas fa-columns"></i> Boards</Button>
+                                    </a>
+                                </li>
+                               
+                                <li class="select-menu">
+                                    <a href="/home">
+                                        <Button class="btn btn-light"><i class="fas fa-home"></i> Home</Button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <div class="col-sm-8 content-main">
+                                <!-- bảng hiển thị -->
+                                <div class="personal-broad">
+                                    <h3 style="margin-bottom: -80px; margin-top: 60px; margin-left: 40px;">Personal
+                                        broad</h3>
+
+                                    <div class="broads" id="broads">
+                                        <!--  broads  -->
+
+                                    </div>
+
+                                    <div class="card" data-toggle="modal" data-target="#createBroad"
+                                        style="cursor: pointer; background: #cccccc3d; text-align: center; position: relative;">
+                                        <b
+                                            style="position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);">Create
+                                            a new broad</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 recommend">
+                                <nav id="myScrollspy">
+                                    <ul class="nav  nav-stacked" id='broad_star'>
+                                        <li class="title-select "><i class="far fa-clock"></i> Star Viewed</li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div class="modal" id="createBroad">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Create a new broad</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Title ..." id="broadName">
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" id="create_Broad">
+                                    Create
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="/javascripts/jquery.min.js"></script>
+        <!-- jQuery for Bootstrap's JavaScript plugins -->
+        <script src="/javascripts/popper.min.js"></script>
+        <!-- Popper tooltip library for Bootstrap -->
+        <script src="/javascripts/bootstrap.min.js"></script>
+        <!-- Bootstrap framework -->
+        <script src="/javascripts/jquery.easing.min.js"></script>
+        <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="/javascripts/swiper.min.js"></script>
+        <!-- Swiper for image and text sliders -->
+        <script src="/javascripts/jquery.magnific-popup.js"></script>
+        <!-- Magnific Popup for lightboxes -->
+        <script src="/javascripts/validator.min.js"></script>
+        <!-- Validator.js - Bootstrap plugin that validates forms -->
+        <script src="/javascripts/scripts.js"></script>
+        <script src="/javascripts/leteravatar.js"></script>
+
+        <script src="/javascripts/scroll.js"></script>
+        <script src="/javascripts/home.js"></script>
+        <script src="/javascripts/search.js"></script>
+        <!-- Custom scripts -->
+</body>
+
+</html>

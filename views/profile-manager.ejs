@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trần Đức Bo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="../../public/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="../../public/stylesheets/fontawesome-all.css" rel="stylesheet">
+    <link href="../../public/stylesheets/swiper.css" rel="stylesheet">
+    <link href="../../public/stylesheets/magnific-popup.css" rel="stylesheet">
+    <link href="../../public/stylesheets/styles.css" rel="stylesheet">
+    <link href="../../public/stylesheets/login-second.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="../../public/images/logo.svg" alt="alternative"></a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item search">
+                    <!-- Search form -->
+                    <form class="form-inline active-pink-3 active-pink-4">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header"><button class="btn btn-primary icon-menu"><i
+                                class="fas fa-home"></i></button> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header"><button class="btn btn-primary icon-menu"><i
+                                class="fas fa-bell"></i></button> <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img class="round icon-menu" width="60" height="60" avatar="Lê Đình Tài">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div class="intro dropdown-item">
+                            <img class="round icon-menu" width="60" height="60" avatar="Lê Đình Tài">
+                            <div class="infor">
+                                <div class="name">Lê Đình Tài</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="#"><span class="item-text">Profile and Visibility</span></a>
+                        <a class="dropdown-item" href="#"><span class="item-text">Activity</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="#"><span class="item-text">Help</span></a>
+                        <a class="dropdown-item" href="#"><span class="item-text">Setting</span></a>
+                        <a class="dropdown-item" href="#"><span class="item-text">Logout</span></a>
+                    </div>
+                </li>
+                <!-- end of dropdown menu -->
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">Contact</a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+    <div class="header-intro">
+        <div class="header-content">
+            <div class="intro">
+                <img class="round icon-menu" width="40" height="40" avatar="Lê Đình Tài">
+                <div class="infor">
+                    <div class="name">Lê Đình Tài</div>
+                </div>
+            </div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs menu-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#profile">Profile and Visibility</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#activity">Activity</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#card">Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#setting">Setting</a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+        </div>
+    </div>
+    <div class="container card" style="width: 750px; margin-bottom: 150px; padding: 20px 30px 100px 40px;">
+        <div class="tab-content">
+            <div id="profile" class="tab-pane active"><br>
+                <h3>About</h3>
+                <form action="#" method="POST" class="">
+                    <div class="form-group">
+                        <label for="usr">Email:</label>
+                        <input type="text" class="form-control" id="email" name="email" value="tai@gmail.com" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">Fullname:</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" value="Lee MeenHoo">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">Phone number:</label>
+                        <input type="number" class="form-control" id="phone" name="phone" value="0900080886">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">Bio:</label>
+                        <textarea name="overview" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+            <div id="activity" class="container tab-pane fade"><br>
+                <div class="setting">
+                    <div class="setting-account">
+                        <h4>Account</h4>
+                        <hr>
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Change
+                            Password</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Change password</h4>
+                                        <button type="button" class="close" data-dismiss="modal" style="float: left; width: 40px;">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="changePassword" method="POST" class="">
+                                            <div class="form-group">
+                                                <label for="usr">Old Password:</label>
+                                                <input type="password" class="form-control" id="password" name="password-old">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="usr">New Password:</label>
+                                                <input type="password" class="form-control" id="password" name="password-new">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="usr">Confirm Password:</label>
+                                                <input type="password" class="form-control" id="password" name="confirm">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary" data-dismiss="modal" style="text-align: center;">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="../../public/javascripts/jquery.min.js"></script>
+                <!-- jQuery for Bootstrap's JavaScript plugins -->
+                <script src="../../public/javascripts/popper.min.js"></script>
+                <!-- Popper tooltip library for Bootstrap -->
+                <script src="../../public/javascripts/bootstrap.min.js"></script>
+                <!-- Bootstrap framework -->
+                <script src="../../public/javascripts/jquery.easing.min.js"></script>
+                <!-- jQuery Easing for smooth scrolling between anchors -->
+                <script src="../../public/javascripts/swiper.min.js"></script>
+                <!-- Swiper for image and text sliders -->
+                <script src="../../public/javascripts/jquery.magnific-popup.js"></script>
+                <!-- Magnific Popup for lightboxes -->
+                <script src="../../public/javascripts/validator.min.js"></script>
+                <!-- Validator.js - Bootstrap plugin that validates forms -->
+                <script src="../../public/javascripts/scripts.js"></script>
+                <script src="../../public/javascripts/leteravatar.js"></script>
+
+                <script src="../../public/javascripts/scroll.js"></script>
+                <!-- Custom scripts -->
+</body>
+
+</html>
